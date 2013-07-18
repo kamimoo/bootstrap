@@ -50,6 +50,13 @@ defaults write -g AppleShowScrollBars -string 'Automatic'
 # 拡張子を常に表示する
 defaults write -g AppleShowAllExtensions -bool true
 
+# すべてのファイルを表示
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# デフォルトでリスト表示にする
+# アイコン: `icnv`, カラム: `clmv`, CoverFlow: `Flwv`
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
 # Finderで検索するときは現在のディレクトリ以下から
 defaults write com.apple.finder FXDefaultSearchScope -string 'SCcf'
 
@@ -87,7 +94,11 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad DragLock -bool
 defaults write -g NSQuitAlwaysKeepsWindows -bool false
 
 # ポインタを最大に
-defaults write com.apple.universalaccess mouseDriverCursorSize -int 4
+defaults write com.apple.universalaccess mouseDriverCursorSize -int 2
+
+# 補助装置にアクセスできるようにする
+echo -n 'a' | sudo tee /private/var/db/.AccessibilityAPIEnabled > /dev/null 2>&1
+sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
 
 # Activity Monitor.app {{{
 # Dockのアイコンをメモリ使用量に
