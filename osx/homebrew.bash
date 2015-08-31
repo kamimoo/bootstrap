@@ -29,6 +29,12 @@ echo "Web tools"
 brew install curl w3m
 brew install wget --enable-iri
 
+echo "ImageMagick"
+brew install libjpeg
+brew install libtool --universal
+brew install jpeg
+brew install imagemagick --with-libtiff
+
 echo "Other tools"
 brew install keychain ssh-copy-id coreutils htop-osx
 
