@@ -39,6 +39,7 @@ echo "Other tools"
 brew install keychain ssh-copy-id coreutils htop-osx
 
 brew install nkf
+brew install jq
 
 echo "Cask"
 brew install caskroom/cask/brew-cask
