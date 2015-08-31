@@ -2,7 +2,7 @@
 
 if [[ ! -x $(/usr/bin/which -s brew) ]]; then
   echo "Homebrew is not found, try to install"
-  /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+  /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 brew update
