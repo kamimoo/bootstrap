@@ -25,9 +25,6 @@ brew install rbenv ruby-build
 echo "Install haskell"
 brew install haskell-platform
 
-echo "Install Node.js"
-brew install node
-
 echo "Web tools"
 brew install curl w3m
 brew install wget --enable-iri
