@@ -34,3 +34,9 @@ brew install keychain ssh-copy-id coreutils htop-osx
 
 brew install nkf
 
+echo "Cask"
+brew install caskroom/cask/brew-cask
+brew cask install iterm2
+brew cask install pusher
+brew cask install imageoptim
+brew cask install coteditor
