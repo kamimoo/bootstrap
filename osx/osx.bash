@@ -60,6 +60,10 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 # Finderで検索するときは現在のディレクトリ以下から
 defaults write com.apple.finder FXDefaultSearchScope -string 'SCcf'
 
+# Finderで新規ウィンドウで開く場所
+# ホーム： `PfHm`, コンピュータ: `PfCm`, HDD: `PfVo`, マイファイル: `PfAF
+defaults write com.apple.finder NewWindowTarget -string 'PfHm'
+
 # ファイルに保存ダイアログは常に展開
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
 
@@ -104,6 +108,12 @@ sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
 # Dockのアイコンをメモリ使用量に
 defaults write com.apple.ActivityMonitor IconType -int 4
 # }}}
+
+# スクリーンショットの保存場所変更
+defaults write com.apple.screencapture location ~/Screenshots/
+
+# ウィンドウを再度開かない
+defaults write -g ApplePersistence -bool no
 
 # Alfred.app {{{
 # ステータスバーのアイコンを隠す
